@@ -481,10 +481,12 @@ section { position: relative; }
 
 /* Film grain over the whole page (decorative, ignores the pointer) */
 body::after {
-  content: ""; position: fixed; inset: -50%; z-index: 80; pointer-events: none; opacity: .06;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation: grain 1.2s steps(6) infinite;
+  content: ""; position: fixed; inset: -6%; z-index: 80; pointer-events: none; opacity: .05;
+  background: url("../assets/img/grain.webp") repeat; background-size: 160px 160px;
+  animation: grain 1.2s steps(6) infinite; will-change: transform;
 }
+/* Phones get the grain without the jitter: one less full-screen layer moving on every frame */
+@media (hover: none), (max-width: 760px) { body::after { animation: none; inset: 0; } }
 @keyframes grain { 0% { transform: translate(0, 0); } 20% { transform: translate(-3%, 2%); } 40% { transform: translate(2%, -3%); } 60% { transform: translate(-2%, -1%); } 80% { transform: translate(3%, 3%); } 100% { transform: translate(0, 0); } }
 
 /* ---------- Pill nav ---------- */
@@ -1006,3 +1008,7 @@ body::after {
 /* No hard divider lines into or out of Lilac, so its haze blends with the sections around it */
 .case--lilac::before, .case--lilac + .cin::before { display: none; }
 @media (max-width: 560px) { .lilac-mark { margin-left: 0; padding-left: 16px; } }
+
+
+/* Case numbers stay whole on every screen: sized to fit, then slid inside the edges */
+.case .ghost span { font-size: clamp(3.4rem, 15vw, 15rem); }

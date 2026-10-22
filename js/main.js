@@ -9,23 +9,47 @@
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   // Keep a tabbed card at the height of its tallest state, so switching never changes the page length
   var lockHeight = function (el, n, fill) {
+    var lastW = 0;
     var measure = function () {
       var w = el.getBoundingClientRect().width;
-      if (!w) return;
-      var c = el.cloneNode(true);
-      c.removeAttribute('id'); c.setAttribute('aria-hidden', 'true');
-      c.style.cssText += ';position:absolute;visibility:hidden;pointer-events:none;left:-9999px;top:0;min-height:0;height:auto;width:' + w + 'px';
-      el.parentNode.appendChild(c);
+      if (!w || w === lastW) return;
+      lastW = w;
+      // Fill every state into its own hidden copy, then read all heights in one layout pass
+      var box = document.createElement('div');
+      box.setAttribute('aria-hidden', 'true');
+      box.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;left:-9999px;top:0;contain:layout style';
+      var copies = [];
+      for (var i = 0; i < n; i++) {
+        var c = el.cloneNode(true);
+        c.removeAttribute('id');
+        c.style.cssText += ';position:static;min-height:0;height:auto;width:' + w + 'px';
+        fill(c, i); box.appendChild(c); copies.push(c);
+      }
+      el.parentNode.appendChild(box);
       var max = 0;
-      for (var i = 0; i < n; i++) { fill(c, i); max = Math.max(max, c.getBoundingClientRect().height); }
-      c.parentNode.removeChild(c);
+      for (var j = 0; j < n; j++) max = Math.max(max, copies[j].getBoundingClientRect().height);
+      box.parentNode.removeChild(box);
       el.style.minHeight = Math.ceil(max) + 'px';
     };
-    measure();
-    var t;
-    addEventListener('resize', function () { clearTimeout(t); t = setTimeout(measure, 150); });
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
-    addEventListener('load', measure);
+    // Measure once the fonts are in and the card is getting close, while the browser is idle
+    var idle = window.requestIdleCallback || function (f) { return setTimeout(f, 1); };
+    var started = false;
+    var start = function () {
+      if (started) return; started = true;
+      var go = function () { idle(measure, { timeout: 400 }); };
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(go); else go();
+      var t;
+      addEventListener('resize', function () { clearTimeout(t); t = setTimeout(measure, 150); });
+    };
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        if (es[0].isIntersecting) { io.disconnect(); start(); }
+      }, { rootMargin: '900px 0px' });
+      io.observe(el);
+    }
+    // Either way, lock it soon after the page has finished loading
+    var later = function () { setTimeout(start, 1500); };
+    if (document.readyState === 'complete') later(); else addEventListener('load', later);
   };
 
   /* ---------- Footer year ---------- */
@@ -665,8 +689,13 @@
       drifts.forEach(function (el, i) {
         var r = el.parentNode.parentNode.getBoundingClientRect();
         if (r.bottom < 0 || r.top > vh) return;
-        var p = (vh - r.top) / (vh + r.height);
-        el.style.setProperty('--dx', ((i % 2 ? -1 : 1) * (p * 24 - 12)).toFixed(2) + 'vw');
+        var p = (vh - r.top) / (vh + r.height), vw = innerWidth;
+        if (el.__w == null || el.__vw !== vw) { el.__w = el.offsetWidth; el.__vw = vw; }
+        if (el.__w < vw * 0.94) {
+          // Short titles (Case 01, 02, 03) slide within the screen so the number never drops off the edge
+          var m = vw * 0.03, k = i % 2 ? 1 - p : p;
+          el.style.setProperty('--dx', (m + Math.max(0, Math.min(1, k)) * (vw - el.__w - 2 * m)).toFixed(1) + 'px');
+        } else el.style.setProperty('--dx', ((i % 2 ? -1 : 1) * (p * 24 - 12)).toFixed(2) + 'vw');
       });
       wallCols.forEach(function (col) {
         var r = col.parentNode.getBoundingClientRect();

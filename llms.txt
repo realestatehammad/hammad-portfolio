@@ -17,7 +17,7 @@ Everything on this portfolio is real, live work. No metrics, testimonials or res
 ## Case studies
 
 - [Hammad Mahmud Real Estate, hammadtherealtor.ca](https://hammad-mahmud.pages.dev/#case-realestate): his own real estate website for first-time buyers and sellers in Mississauga, Milton and Oakville. Buyer Blueprint questionnaire, built-in booking (not a Calendly widget), city guides, a free 28-page buyer guide, Search Console and GA4. Live site: https://hammadtherealtor.ca/
-- [Castoreum Canada, castoreumcanada.ca](https://hammad-mahmud.pages.dev/#case-castoreum): bilingual English and French B2B export website he built for Solitaire Globals, a family friend's business (he does not own it). Grade pages, FAQ, export-route globe, quote form and WhatsApp. Live site: https://castoreumcanada.ca/
+- [Castoreum Canada, castoreumcanada.ca](https://hammad-mahmud.pages.dev/#case-castoreum): bilingual English and French B2B export website he built for Solitaire Globals, a Canadian trading company growing its online presence (a client project). Grade pages, FAQ, export-route globe, quote form and WhatsApp. Live site: https://castoreumcanada.ca/
 - [Lilac Mithai Studio](https://hammad-mahmud.pages.dev/#case-lilac): ongoing marketing strategy and Meta ads for a luxury dessert business in the GTA, around product launches and events like Diwali. Lilac's branding and creative are their own. Instagram: https://www.instagram.com/lilac.studioss/
 - [Lead qualification automation](https://hammad-mahmud.pages.dev/#automation): questionnaire-to-booked-call workflow for his real estate business.
 
@@ -105,7 +105,7 @@ SEO and SEM fundamentals, local SEO and city pages, keyword-focused content, cop
 
 ### What has Hammad Mahmud built?
 
-Three live projects. hammadtherealtor.ca, his real estate website, has a Buyer Blueprint questionnaire, a built-in booking system and city guides for Mississauga, Milton and Oakville. castoreumcanada.ca is a bilingual English and French B2B export website he built for Solitaire Globals, a family friend's business. For Lilac Mithai Studio, a luxury dessert business in the GTA, he plans the marketing strategy and runs Meta ads for product launches and events like Diwali.
+Three live projects. hammadtherealtor.ca, his real estate website, has a Buyer Blueprint questionnaire, a built-in booking system and city guides for Mississauga, Milton and Oakville. castoreumcanada.ca is a bilingual English and French B2B export website he built for Solitaire Globals, a Canadian trading company growing its online presence. For Lilac Mithai Studio, a luxury dessert business in the GTA, he plans the marketing strategy and runs Meta ads for product launches and events like Diwali.
 
 ### Which marketing tools does Hammad use?
 
