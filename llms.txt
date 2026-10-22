@@ -1,0 +1,131 @@
+# Hammad Mahmud, Digital Marketer (Mississauga, Ontario, Canada)
+
+> Hammad Mahmud is an entry-level digital marketer based in Mississauga, Ontario. He builds websites, SEO-focused content, social creative and lead automation, and runs Meta ads for a luxury dessert studio. He is open to junior digital marketing, SEO, social media, content, e-commerce and marketing operations roles in the GTA, hybrid, or remote in Canada.
+
+Everything on this portfolio is real, live work. No metrics, testimonials or results are claimed unless shown on the page.
+
+## Key facts
+
+- Name: Hammad Mahmud
+- Role: Digital Marketer (entry level), available now
+- Location: Mississauga, Ontario, Canada. On-site in the GTA, hybrid, or remote in Canada
+- Email: hammad.s.mahmud@gmail.com
+- LinkedIn: https://www.linkedin.com/in/hammad-mahmud-b88b9414b
+- Resume (PDF): https://hammad-mahmud.pages.dev/assets/Hammad-Mahmud-Resume.pdf
+- Portfolio: https://hammad-mahmud.pages.dev/
+
+## Case studies
+
+- [Hammad Mahmud Real Estate, hammadtherealtor.ca](https://hammad-mahmud.pages.dev/#case-realestate): his own real estate website for first-time buyers and sellers in Mississauga, Milton and Oakville. Buyer Blueprint questionnaire, built-in booking (not a Calendly widget), city guides, a free 28-page buyer guide, Search Console and GA4. Live site: https://hammadtherealtor.ca/
+- [Castoreum Canada, castoreumcanada.ca](https://hammad-mahmud.pages.dev/#case-castoreum): bilingual English and French B2B export website he built for Solitaire Globals, a family friend's business (he does not own it). Grade pages, FAQ, export-route globe, quote form and WhatsApp. Live site: https://castoreumcanada.ca/
+- [Lilac Mithai Studio](https://hammad-mahmud.pages.dev/#case-lilac): ongoing marketing strategy and Meta ads for a luxury dessert business in the GTA, around product launches and events like Diwali. Lilac's branding and creative are their own. Instagram: https://www.instagram.com/lilac.studioss/
+- [Lead qualification automation](https://hammad-mahmud.pages.dev/#automation): questionnaire-to-booked-call workflow for his real estate business.
+
+## Lead qualification workflow, step by step
+
+1. Attract a prospective buyer: Give first-time buyers a reason to start. The homepage, city pages, the free guide and Instagram all point to one value-first offer: a free, personal Buyer Blueprint. Tools: Website builder, Canva, Instagram, Facebook. Benefit: One clear offer across every channel turns passive visitors into people who want to take part. No hard sell is needed to get them started.
+2. Capture preferences and requirements: A short mobile-friendly questionnaire collects budget, savings, timeline, property type, preferred area and readiness signals such as pre-approval. Tools: Custom web form, Google Sheets. Benefit: Structured first-party data instead of a vague "contact me" message. Every lead arrives with the context needed to help them.
+3. Process the questionnaire: Google Apps Script picks up each new submission, cleans the answers and runs the calculations the Blueprint needs. Tools: Google Apps Script, Google Sheets. Benefit: Consistent processing in minutes, with no copy-pasting or manual data entry. The same rules apply to every lead.
+4. Generate a personalized Buyer Blueprint: The script fills a branded, pitch-deck-style template with the buyer's own numbers and next steps, then exports it as a PDF. Tools: Google Apps Script, ChatGPT, Claude, Google AI Studio. Benefit: Personalization at scale. Each buyer gets a plan that feels hand-made, and AI tools helped me write the copy and develop the script logic.
+5. Categorize the lead for follow-up: Each submission gets an internal status: hot, warm, cold or needs work. The status depends on timeline, finances and readiness. Tools: Google Apps Script, Google Sheets. Benefit: Lead qualification means follow-up time goes to the people ready to act. Longer-term leads still get nurtured instead of forgotten.
+6. Send communications and enable booking: The Blueprint is emailed to the buyer automatically. A booking system built into the site (not a third-party widget) checks calendar availability, sends confirmation emails and creates the meeting link, so the buyer books without leaving the page. Tools: Gmail, Google Calendar, Google Meet, Google Apps Script. Benefit: Instant value, then a frictionless next step. The buyer is never waiting on a manual reply to book.
+7. Track submissions and appointments: Questionnaire submissions and bookings are logged in separate spreadsheets, so I have a simple, searchable record of the pipeline. Tools: Google Sheets. Benefit: A lightweight CRM. I can see how many leads are at each stage and follow up on time, without paying for software.
+
+## Skills, with evidence
+
+### SEO and search
+
+- Google Search Console: Set up on both live sites. I used it to get the relaunched real estate site indexed, and I monitor queries and impressions.
+- Local SEO and service-area pages: City guides for Mississauga, Milton and Oakville, built around first-time buyer searches.
+- On-page SEO and information architecture: Descriptive titles, FAQ content and grade and price pages on Castoreum Canada.
+- Bilingual (EN/FR) content structure: A French homepage for the French perfumery market.
+- Keyword research: Used to plan page topics. Formal methods covered in Google course 2.
+
+### Content and copywriting
+
+- Conversion copywriting: Value-first headlines and CTAs, for example "Your first home starts with a plan, not a guess."
+- Long-form lead magnets: A 28-page GTA First-Time Buyer Guide with a gated landing page.
+- Educational and FAQ content: A buyer FAQ answering grades, legality, documents and pricing questions.
+- B2B content strategy: Content that educates specialist international buyers before they inquire.
+- AI-assisted content workflows: ChatGPT, Claude and Google AI Studio for drafting, with my own editing and fact-checking.
+
+### Social media and creative
+
+- Branded social content: Real estate posts on Instagram and Facebook: wins, education and behind the scenes.
+- Canva: Graphics and marketing creative for my real estate brand.
+- CapCut: Short-form video editing for social.
+- Meta Business Suite: Facebook and Instagram presence for my real estate brand.
+- Landing-page content: City pages, a gated guide page and seller report page, each with one clear CTA.
+
+### Websites and CRO
+
+- Website building: Two live sites: relaunched hammadtherealtor.ca and built castoreumcanada.ca.
+- Landing pages and funnels: Buyer Blueprint, seller report and guide download pages, each with one clear CTA.
+- Low-friction inquiry design: Pre-written quote and WhatsApp messages for export buyers.
+- Site health (SSL, maintenance): Fixed the SSL and maintenance problems on the older real estate site.
+
+### Marketing ops and automation
+
+- Google Apps Script: Processes the questionnaire, generates the PDFs, sends the emails and powers booking.
+- Google Sheets as a lightweight CRM: Separate trackers for submissions and bookings.
+- Lead scoring and qualification: Hot, warm, cold and needs-work categorization for follow-up.
+- Make (no-code automation): Make Intermediate badge: HTTP requests, webhooks, error handling and functions.
+- Email workflows: Automated Blueprint delivery and booking confirmations.
+
+### Analytics and ads
+
+- Google Analytics 4: Tracking both live sites behind a cookie consent banner. Funnel events are the next step.
+- Privacy and cookie consent: Optional analytics cookies the visitor can decline.
+- Google Ads and SEM: Covered in "Attract and Engage Customers with Digital Marketing" (October 2026).
+- Campaign tracking (UTMs, events): Next step for both sites, set out in each case study's Measurement section.
+
+### E-commerce
+
+- E-commerce fundamentals: Foundations of Digital Marketing and E-commerce (September 2026).
+- Shopify: Covered in the Google certificate curriculum.
+- Product information for buyers: Grade cards, a minimum order and an ordering process for a B2B export product.
+
+## Frequently asked questions
+
+### Who is Hammad Mahmud?
+
+Hammad Mahmud is an entry-level digital marketer based in Mississauga, Ontario, Canada. He builds websites, SEO-focused content, social creative and lead automation, and he runs Meta ads for a luxury dessert studio. Before moving into marketing he worked as a real estate agent and owned a Lazeez Shawarma franchise, which is where he learned how customers decide.
+
+### What marketing jobs is Hammad Mahmud looking for?
+
+He is open to Digital Marketing Specialist (junior), Social Media Coordinator, Content Marketing Coordinator, E-commerce Coordinator, Marketing Assistant, Junior SEO Specialist and Marketing Operations roles in Mississauga and Toronto, hybrid, or remote in Canada.
+
+### Where can Hammad Mahmud work?
+
+He lives in Mississauga and is available for on-site roles across the Greater Toronto Area (GTA), hybrid positions, and remote work anywhere in Canada. He is available now.
+
+### What digital marketing skills does Hammad have?
+
+SEO and SEM fundamentals, local SEO and city pages, keyword-focused content, copywriting and editing, social media, Meta ads, lead generation, landing pages and customer journey design. On the operations side he builds lead capture and qualification, email workflows, booking journeys, spreadsheet tracking and workflow automation, and he tracks results in Google Search Console and GA4.
+
+### What has Hammad Mahmud built?
+
+Three live projects. hammadtherealtor.ca, his real estate website, has a Buyer Blueprint questionnaire, a built-in booking system and city guides for Mississauga, Milton and Oakville. castoreumcanada.ca is a bilingual English and French B2B export website he built for Solitaire Globals, a family friend's business. For Lilac Mithai Studio, a luxury dessert business in the GTA, he plans the marketing strategy and runs Meta ads for product launches and events like Diwali.
+
+### Which marketing tools does Hammad use?
+
+Google Search Console, Google Analytics 4, Google Sheets, Google Apps Script, Make, Google AI Studio, ChatGPT, Claude and Claude Code. He is also learning Google Ads, Meta Business Suite, Canva, CapCut and Shopify.
+
+### Can Hammad Mahmud work with AI?
+
+Yes. He works with all the major large language models, including ChatGPT, Claude and Gemini, and uses Claude Code to build and update web pages, scripts and automations. He checks every result himself before it goes live.
+
+### What marketing certifications does Hammad have?
+
+He completed the Google AI Professional Certificate in September 2026 and earned the Make Intermediate badge in October 2026. He is working through the Google Digital Marketing and E-commerce Certificate and has finished 2 of its 7 courses.
+
+### How do I contact Hammad Mahmud?
+
+Email hammad.s.mahmud@gmail.com or connect on LinkedIn at linkedin.com/in/hammad-mahmud-b88b9414b. His one-page resume is available as a PDF on this site.
+
+## Experience
+
+- Digital Marketing Specialist (self-employed projects), Sep 2026 to present
+- Real Estate Agent, Homelife TRADEMAX Realty, Jul 2024 to present
+- Real Estate Agent, Royal LePage Signature Realty, Jan 2022 to Jul 2024
+- Franchise Owner, Lazeez Shawarma, Sep 2018 to Jun 2026
