@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://hammad-mahmud.pages.dev/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-22T23:00:00+00:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://hammad-mahmud.pages.dev/"/>
     <image:image><image:loc>https://hammad-mahmud.pages.dev/assets/img/hammad-headshot.webp</image:loc></image:image>
     <image:image><image:loc>https://hammad-mahmud.pages.dev/assets/og-image.png</image:loc></image:image>
@@ -29,10 +29,10 @@
   </url>
   <url>
     <loc>https://hammad-mahmud.pages.dev/assets/Hammad-Mahmud-Resume.pdf</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-22T23:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://hammad-mahmud.pages.dev/llms.txt</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-22T23:00:00+00:00</lastmod>
   </url>
 </urlset>
