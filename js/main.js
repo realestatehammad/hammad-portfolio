@@ -52,6 +52,23 @@
     if (document.readyState === 'complete') later(); else addEventListener('load', later);
   };
 
+  /* ---------- Hero name: shrink to fit if a browser renders the wide font wider than expected ---------- */
+  var heroName = $('.cine__name');
+  if (heroName) {
+    var fitName = function () {
+      heroName.style.fontSize = '';
+      var avail = heroName.clientWidth, need = 0;
+      $$('.row', heroName).forEach(function (r) {
+        var rg = document.createRange(); rg.selectNodeContents(r);
+        need = Math.max(need, rg.getBoundingClientRect().width);
+      });
+      if (need > avail && need > 0) heroName.style.fontSize = (parseFloat(getComputedStyle(heroName).fontSize) * avail / need * 0.98).toFixed(1) + 'px';
+    };
+    fitName();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitName);
+    var fnT; addEventListener('resize', function () { clearTimeout(fnT); fnT = setTimeout(fitName, 120); });
+  }
+
   /* ---------- Footer year ---------- */
   var yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

@@ -1012,3 +1012,7 @@ body::after {
 
 /* Case numbers stay whole on every screen: sized to fit, then slid inside the edges */
 .case .ghost span { font-size: clamp(3.4rem, 15vw, 15rem); }
+
+/* Hero name always fits its column, whatever font rendering the visitor's browser uses */
+.cine__grid > div:first-child { container-type: inline-size; }
+.cine__name { font-size: min(clamp(3.3rem, 8.4vw, 8.6rem), 17cqi); }
