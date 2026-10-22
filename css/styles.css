@@ -1016,3 +1016,13 @@ body::after {
 /* Hero name always fits its column, whatever font rendering the visitor's browser uses */
 .cine__grid > div:first-child { container-type: inline-size; }
 .cine__name { font-size: min(clamp(3.3rem, 8.4vw, 8.6rem), 17cqi); }
+
+/* Selected workflow step: dark number on the lime dot, even once earlier steps are marked done */
+.flow__tab[aria-selected="true"] .flow__dot, .flow__tab[aria-selected="true"].is-done .flow__dot { color: #0b0d11; font-weight: 600; }
+
+/* Let's talk: calmer scale on large screens */
+.contact { padding: clamp(56px, 7vw, 104px) 0; }
+.contact__title { font-size: clamp(2.6rem, 5.6vw, 5.2rem); margin-bottom: 24px; }
+.contact__link { padding: 16px 4px; }
+.contact__title { max-width: none; }
+.contact__title .nb { display: inline-block; }
