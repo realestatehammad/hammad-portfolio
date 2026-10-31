@@ -1208,3 +1208,17 @@ body::after {
 .contact .copy-btn:hover { background: var(--lime); color: #0b0d11; }
 .contact .small { color: var(--muted); }
 @media (min-width: 720px) { .contact__title { font-size: clamp(2.4rem, 4.2vw, 4rem); } .contact__title .nb { white-space: nowrap; } }
+/* Skills: regular grid, equal-height cards per row, footers aligned */
+.sk-grid { columns: auto; display: grid; grid-template-columns: 1fr; gap: 14px; align-items: stretch; }
+.sk-group { margin: 0; display: flex; flex-direction: column; }
+.sk-group .sk-more { align-self: flex-start; }
+.sk-group .sk-where { margin-top: auto; padding-top: 14px; }
+@media (min-width: 700px) {
+  .sk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .sk-grid:not(.is-searching):not(.is-filtered) .sk-group:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (min-width: 1080px) {
+  .sk-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sk-grid:not(.is-searching):not(.is-filtered) .sk-group:last-child:nth-child(odd) { grid-column: auto; }
+  .sk-grid:not(.is-searching):not(.is-filtered) .sk-group:last-child:nth-child(3n+1) { grid-column: 1 / -1; }
+}
