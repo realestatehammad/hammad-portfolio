@@ -34,7 +34,7 @@
 }
 
 /* Light "paper document" islands inside the dark site */
-.paper-scope, .bp, .resume-sheet, .contact {
+.paper-scope, .bp, .resume-sheet {
   --paper: #f4f0e7; --paper-2: #ebe5d8; --paper-3: #e1d9c8;
   --ink: #131720; --ink-2: #2f3441; --muted: #565b68; --line: #d3cab7;
   --cobalt: #2241d1; --cobalt-ink: #1a33a8;
@@ -1194,3 +1194,17 @@ body::after {
 }
 .no-js .sk-group .sk-chips li { display: block; }
 .no-js .sk-more, .no-js .sk-tools { display: none; }
+
+/* Contact: dark, softer than the old lime block */
+.contact { background: radial-gradient(120% 140% at 85% 0%, rgba(214,244,91,.10), transparent 55%), var(--night-2); border-top: 1px solid var(--night-line); color: var(--ink); }
+.contact .contact__title { color: var(--ink); }
+.contact .contact__links, .contact .contact__link { border-color: var(--night-line); }
+.contact .contact__link:hover { background: rgba(214,244,91,.06); color: var(--lime); }
+.contact .contact__link small { color: var(--muted); }
+.contact .contact__link .arrow { color: var(--lime); }
+.contact .chip { border-color: rgba(214,244,91,.45); color: var(--ink); }
+.contact .hl { color: #0b0d11; }
+.contact .copy-btn { border-color: var(--lime); color: var(--lime); }
+.contact .copy-btn:hover { background: var(--lime); color: #0b0d11; }
+.contact .small { color: var(--muted); }
+@media (min-width: 720px) { .contact__title { font-size: clamp(2.4rem, 4.2vw, 4rem); } .contact__title .nb { white-space: nowrap; } }
