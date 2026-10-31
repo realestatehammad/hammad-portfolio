@@ -572,108 +572,103 @@
     lockHeight(bpCard, combos.length, function (c, i) { fillBlueprint(c, computeBlueprint(combos[i]), 'Custom buyer'); });
   }
 
-  /* ---------- Skills explorer ---------- */
-  var L = { 3: 'Applied', 2: 'Familiar', 1: 'Coursework' };
-  var SKILLS = [
-    { name: 'SEO and search', items: [
-      { s: 'Google Search Console', l: 3, ev: 'Set up on both live sites. I used it to get the relaunched real estate site indexed, and I monitor queries and impressions.', link: '#case-realestate', lt: 'Real estate case study' },
-      { s: 'Local SEO and service-area pages', l: 3, ev: 'City guides for Mississauga, Milton and Oakville, built around first-time buyer searches.', link: 'https://hammadtherealtor.ca/mississauga/', lt: 'Mississauga page' },
-      { s: 'On-page SEO and information architecture', l: 3, ev: 'Descriptive titles, FAQ content and grade and price pages on Castoreum Canada.', link: '#case-castoreum', lt: 'Castoreum case study' },
-      { s: 'Bilingual (EN/FR) content structure', l: 3, ev: 'A French homepage for the French perfumery market.', link: '#case-castoreum', lt: 'Castoreum case study' },
-      { s: 'Keyword research', l: 2, ev: 'Used to plan page topics. Formal methods covered in Google course 2.', link: '#learning', lt: 'Learning' }
-    ]},
-    { name: 'Content and copywriting', items: [
-      { s: 'Conversion copywriting', l: 3, ev: 'Value-first headlines and CTAs, for example "Your first home starts with a plan, not a guess."', link: '#case-realestate', lt: 'Real estate case study' },
-      { s: 'Long-form lead magnets', l: 3, ev: 'A 28-page GTA First-Time Buyer Guide with a gated landing page.', link: 'https://hammadtherealtor.ca/guides/gta-first-time-buyer-guide/', lt: 'Buyer guide' },
-      { s: 'Educational and FAQ content', l: 3, ev: 'A buyer FAQ answering grades, legality, documents and pricing questions.', link: '#case-castoreum', lt: 'Castoreum case study' },
-      { s: 'B2B content strategy', l: 3, ev: 'Content that educates specialist international buyers before they inquire.', link: '#case-castoreum', lt: 'Castoreum case study' },
-      { s: 'AI-assisted content workflows', l: 3, ev: 'ChatGPT, Claude and Google AI Studio for drafting, with my own editing and fact-checking.', link: '#automation', lt: 'Automation' }
-    ]},
-    { name: 'Social media and creative', items: [
-      { s: 'Branded social content', l: 3, ev: 'Real estate posts on Instagram and Facebook: wins, education and behind the scenes.', link: 'https://instagram.com/hammadtherealtor', lt: '@hammadtherealtor' },
-      { s: 'Canva', l: 2, ev: 'Graphics and marketing creative for my real estate brand.', link: 'https://instagram.com/hammadtherealtor', lt: '@hammadtherealtor' },
-      { s: 'CapCut', l: 2, ev: 'Short-form video editing for social.', link: '#learning', lt: 'Learning' },
-      { s: 'Meta Business Suite', l: 2, ev: 'Facebook and Instagram presence for my real estate brand.', link: '#learning', lt: 'Learning' },
-      { s: 'Landing-page content', l: 3, ev: 'City pages, a gated guide page and seller report page, each with one clear CTA.', link: '#case-realestate', lt: 'Real estate case study' }
-    ]},
-    { name: 'Websites and CRO', items: [
-      { s: 'Website building', l: 3, ev: 'Two live sites: relaunched hammadtherealtor.ca and built castoreumcanada.ca.', link: '#case-realestate', lt: 'Real estate case study' },
-      { s: 'Landing pages and funnels', l: 3, ev: 'Buyer Blueprint, seller report and guide download pages, each with one clear CTA.', link: '#case-realestate', lt: 'Real estate case study' },
-      { s: 'Low-friction inquiry design', l: 3, ev: 'Pre-written quote and WhatsApp messages for export buyers.', link: '#case-castoreum', lt: 'Castoreum case study' },
-      { s: 'Site health (SSL, maintenance)', l: 3, ev: 'Fixed the SSL and maintenance problems on the older real estate site.', link: '#case-realestate', lt: 'Real estate case study' }
-    ]},
-    { name: 'Marketing ops and automation', items: [
-      { s: 'Google Apps Script', l: 3, ev: 'Processes the questionnaire, generates the PDFs, sends the emails and powers booking.', link: '#automation', lt: 'Workflow explorer' },
-      { s: 'Google Sheets as a lightweight CRM', l: 3, ev: 'Separate trackers for submissions and bookings.', link: '#automation', lt: 'Workflow explorer' },
-      { s: 'Lead scoring and qualification', l: 3, ev: 'Hot, warm, cold and needs-work categorization for follow-up.', link: '#blueprint-demo', lt: 'Blueprint demo' },
-      { s: 'Make (no-code automation)', l: 2, ev: 'Make Intermediate badge: HTTP requests, webhooks, error handling and functions.', link: '#learning', lt: 'Learning' },
-      { s: 'Email workflows', l: 3, ev: 'Automated Blueprint delivery and booking confirmations.', link: '#automation', lt: 'Workflow explorer' }
-    ]},
-    { name: 'Analytics and ads', items: [
-      { s: 'Google Analytics 4', l: 3, ev: 'Tracking both live sites behind a cookie consent banner. Funnel events are the next step.', link: '#case-realestate', lt: 'Real estate case study' },
-      { s: 'Privacy and cookie consent', l: 2, ev: 'Optional analytics cookies the visitor can decline.', link: '#case-realestate', lt: 'Real estate case study' },
-      { s: 'Google Ads and SEM', l: 1, ev: 'Covered in "Attract and Engage Customers with Digital Marketing" (October 2026).', link: '#learning', lt: 'Learning' },
-      { s: 'Campaign tracking (UTMs, events)', l: 1, ev: 'Next step for both sites, set out in each case study\'s Measurement section.', link: '#case-castoreum', lt: 'Castoreum case study' }
-    ]},
-    { name: 'E-commerce', items: [
-      { s: 'E-commerce fundamentals', l: 1, ev: 'Foundations of Digital Marketing and E-commerce (September 2026).', link: '#learning', lt: 'Learning' },
-      { s: 'Shopify', l: 1, ev: 'Covered in the Google certificate curriculum.', link: '#learning', lt: 'Learning' },
-      { s: 'Product information for buyers', l: 3, ev: 'Grade cards, a minimum order and an ordering process for a B2B export product.', link: '#case-castoreum', lt: 'Castoreum case study' }
-    ]}
-  ];
-
-  var skillTabsEl = $('.skills__tabs');
-  var skillPanel = $('#skills-panel');
-  if (skillTabsEl && skillPanel) {
-    skillTabsEl.innerHTML = SKILLS.map(function (g, i) {
-      return '<button type="button" role="tab" id="sk-tab-' + i + '" aria-controls="skills-panel" aria-selected="false" tabindex="-1">' + esc(g.name) + '<span class="count">' + g.items.length + '</span></button>';
-    }).join('');
-    var skillTabs = $$('[role="tab"]', skillTabsEl);
-    var skillHTML = function (i) {
-      var g = SKILLS[i];
-      return '<ul class="skill-list">' + g.items.map(function (it) {
-        return '<li class="skill"><span class="skill__name">' + esc(it.s) + '</span>' +
-          '<span class="skill__level"><span class="lvl" data-l="' + it.l + '" aria-hidden="true"><i></i><i></i><i></i></span>' + L[it.l] + '</span>' +
-          '<p class="skill__ev">' + esc(it.ev) + ' <a href="' + it.link + '"' + (it.link.indexOf('http') === 0 ? ' target="_blank" rel="noopener"' : '') + '>' + esc(it.lt) + (it.link.indexOf('http') === 0 ? ' ↗' : ' →') + '</a></p></li>';
-      }).join('') + '</ul>';
+  /* ---------- Skills finder: search box plus area filters ---------- */
+  var skQ = $('#sk-q'), skGrid = $('.sk-grid'), skStatus = $('#sk-status');
+  if (skQ && skGrid) {
+    var skGroups = $$('.sk-group', skGrid), skBtns = $$('.sk-filters button'), skArea = 'all';
+    var norm = function (t) { return t.toLowerCase().replace(/[^a-z0-9+&/ ]/g, ' ').replace(/\s+/g, ' ').trim(); };
+    $$('.sk-chips li', skGrid).forEach(function (li) { li.__t = norm(li.textContent); });
+    var skRun = function () {
+      var q = norm(skQ.value), hits = 0, shown = 0;
+      skGrid.classList.toggle('is-searching', !!q);
+      skGrid.classList.toggle('is-filtered', !!q || skArea !== 'all');
+      skGroups.forEach(function (g) {
+        var inArea = skArea === 'all' || g.getAttribute('data-area') === skArea, gh = 0;
+        $$('.sk-chips li', g).forEach(function (li) {
+          var hit = !!q && li.__t.indexOf(q) !== -1;
+          li.classList.toggle('is-hit', hit); if (hit) gh++;
+        });
+        var show = inArea && (!q || gh > 0);
+        g.classList.toggle('is-hidden', !show);
+        g.classList.toggle('has-hit', show && gh > 0);
+        if (show) { hits += gh; shown += $$('.sk-chips li', g).length; }
+      });
+      if (!skStatus) return;
+      if (q) skStatus.textContent = hits ? hits + (hits === 1 ? ' skill matches' : ' skills match') + ' "' + skQ.value.trim() + '"' : 'No exact match for "' + skQ.value.trim() + '". Try a shorter word, like "SEO" or "ads".';
+      else skStatus.textContent = skArea === 'all' ? '' : 'Showing ' + shown + ' skills';
     };
-    var renderSkills = function (i) {
-      skillPanel.setAttribute('aria-labelledby', 'sk-tab-' + i);
-      skillPanel.innerHTML = skillHTML(i);
-      skillPanel.classList.remove('skills__panel'); void skillPanel.offsetWidth; skillPanel.classList.add('skills__panel');
-    };
-    var mq = window.matchMedia('(max-width: 860px)');
-    var selectSkill = rovingTabs(skillTabs, renderSkills, mq.matches ? 'horizontal' : 'vertical');
-    selectSkill(0, false);
-    lockHeight(skillPanel, SKILLS.length, function (c, i) { c.innerHTML = skillHTML(i); });
+    skQ.addEventListener('input', skRun);
+    $$('.sk-more', skGrid).forEach(function (b) {
+      var n = b.getAttribute('data-total');
+      b.addEventListener('click', function () {
+        var g = b.closest('.sk-group'), open = g.classList.toggle('is-expanded');
+        b.setAttribute('aria-expanded', String(open));
+        b.textContent = open ? 'Show fewer' : 'Show all ' + n;
+      });
+    });
+    skBtns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        skArea = b.getAttribute('data-area');
+        skBtns.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        skRun();
+      });
+    });
   }
 
-  /* ---------- Approach walkthrough ---------- */
-  var APPROACH = [
-    { t: 'Research', d: 'Understand who the customer is, what they need to know before they act, and where they already look for answers.',
-      ex: 'For Castoreum Canada, that meant learning what perfumers and traders check before they buy: grade, minimum order, legality and export documents.' },
-    { t: 'Strategy', d: 'Choose one clear goal and a single next step, then decide what content and proof will earn that step.',
-      ex: 'The goal was a qualified quote request rather than a checkout. So the plan was to educate first, then make inquiring take one tap.' },
-    { t: 'Execution', d: 'Build it properly: pages, copy, visuals, forms and automations. Then test it on mobile and desktop.',
-      ex: 'Grade cards, a French page, a FAQ, real warehouse photos, and a pre-written quote form with a WhatsApp option.' },
-    { t: 'Measurement', d: 'Decide what success looks like before launch, track it with privacy in mind, and improve from what the data shows.',
-      ex: 'Search Console and GA4 are already tracking the site. Next, I\'m adding GA4 events to compare quote-form sends with WhatsApp clicks.' }
-  ];
-  var apTabs = $$('.stepper [role="tab"]');
-  var apPanel = $('#ap-panel');
-  if (apTabs.length && apPanel) {
-    var apHTML = function (i) {
-      var a = APPROACH[i];
-      return '<div class="flow__fade"><p class="index-num">Step 0' + (i + 1) + ' / 04</p><h3>' + esc(a.t) + '</h3><p>' + esc(a.d) + '</p>' +
-        '<div class="example"><strong>Example: Castoreum Canada</strong>' + esc(a.ex) + '</div></div>';
+  /* ---------- Projects as dropdowns ---------- */
+  var projs = $$('details.proj');
+  if (projs.length) {
+    var openProj = function (id, scroll) {
+      var d = document.getElementById(id);
+      if (!d || d.tagName !== 'DETAILS') return false;
+      d.open = true;
+      if (scroll) {
+        // Content above can still settle (lazy images, locked card heights), so re-aim once or twice after the first scroll
+        var aim = function (smooth) {
+          var off = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 76) + 12;
+          var y = d.getBoundingClientRect().top + scrollY - off;
+          if (!smooth && Math.abs(d.getBoundingClientRect().top - off) < 24) return;
+          scrollTo({ top: y, behavior: smooth && !reduceMotion ? 'smooth' : 'auto' });
+        };
+        setTimeout(function () { aim(true); }, 30);
+        setTimeout(function () { aim(false); }, 900);
+        setTimeout(function () { aim(false); }, 1800);
+      }
+      return true;
     };
-    var renderAp = function (i) {
-      apPanel.setAttribute('aria-labelledby', 'ap-tab-' + i);
-      apPanel.innerHTML = apHTML(i);
-    };
-    var selectAp = rovingTabs(apTabs, renderAp, 'horizontal');
-    selectAp(0, false);
-    lockHeight(apPanel, APPROACH.length, function (c, i) { c.innerHTML = apHTML(i); });
+    projs.forEach(function (d) {
+      d.addEventListener('toggle', function () {
+        // Cards and canvases inside were measured while hidden; let them re-measure now they have a width
+        if (d.open) setTimeout(function () { dispatchEvent(new Event('resize')); }, 40);
+      });
+    });
+    // Links to a project (from skills, nav or another site) open it first
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var id = a.getAttribute('href').slice(1);
+      if (openProj(id, true)) { e.preventDefault(); history.replaceState(null, '', '#' + id); }
+    });
+    if (location.hash) openProj(location.hash.slice(1), true);
+  }
+
+  /* ---------- Summary numbers count up once ---------- */
+  var statNums = $$('.stat__n b[data-count]');
+  if (statNums.length && !reduceMotion && 'IntersectionObserver' in window) {
+    var statObs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        statObs.unobserve(e.target);
+        var el = e.target, end = +el.getAttribute('data-count'), start = end > 1000 ? end - 12 : 0, t0 = null;
+        (function step(t) {
+          if (t0 === null) t0 = t;
+          var k = Math.min(1, (t - t0) / 1100), v = Math.round(start + (end - start) * (1 - Math.pow(1 - k, 3)));
+          el.textContent = v + (el.getAttribute('data-suffix') || '');
+          if (k < 1) requestAnimationFrame(step);
+        })(performance.now());
+      });
+    }, { threshold: 0.6 });
+    statNums.forEach(function (el) { statObs.observe(el); });
   }
 
   /* ---------- Cinematic sections: scroll progress, parallax backdrops, ghost words, cursor glow ---------- */
